@@ -2,28 +2,49 @@
 <html>
 
   <head>
-    <script data-require="angular.js@*" data-semver="1.12.13" src="http://code.angularjs.org/1.2.13/angular.js"></script>
-    <link data-require="bootstrap-css@*" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+	<script>
+
+
+</script>
   </head>
 
   <body ng-app='demo' ng-controller='app'>
-    <h1>Hello Calcualtor</h1>
-    <form>
-  <div class="form-group">
-    <label for="ip1">input 1</label>
-    <input type="number" class="form-control" id="ip1" ng-model='x' placeholder="Enter number">
-  </div>
-  <div class="form-group">
-    <label for="ip2">input 2</label>
-    <input type="number" class="form-control" id="ip2" ng-model='y' placeholder="Enter number">
-  </div>
-  <div class="form-group">
-    <label for="ip3">result</label>
-    <input type="number" class="form-control" id="ip3" ng-model='r' disabled >
-  </div>
-    </form>
+	
+	<table class="table table-condensed table-hover table-bordered table-striped">
+              <thead>
+                <tr>
+				<th class="col-md-1" >Sr.</th>
+                <th class="col-md-4" >Actual wages</th>
+		<th class="col-md-2">Ceiling</th>
+		<th class="col-md-1">Dues</th>
+		<th class="col-md-2">Deposited</th>
+		<th class="col-md-2">Progressive Balance</th>
+		<th class="col-md-2">Difference</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr ng-repeat="x in calculated">
+				
+				<td>{{ $index }}</td>
+                    <td>{{x.actual}}</td>
+					<td>{{ x.ceiling }}</td>
+					<td>{{ x.dues}}</td>
+					<td>{{ x.deposited}}</td>
+					<td>{{ x.progressive}}</td>
+					<td>{{ x.difference}}</td>
+                  </tr>
+              </tbody>
+            </table>
   </body>
 
 </html>
