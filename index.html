@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script data-require="angular.js@*" data-semver="1.12.13" src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <link data-require="bootstrap-css@*" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-app='demo' ng-controller='app'>
+    <h1>Hello Calcualtor</h1>
+    <form>
+  <div class="form-group">
+    <label for="ip1">input 1</label>
+    <input type="number" class="form-control" id="ip1" ng-model='x' placeholder="Enter number">
+  </div>
+  <div class="form-group">
+    <label for="ip2">input 2</label>
+    <input type="number" class="form-control" id="ip2" ng-model='y' placeholder="Enter number">
+  </div>
+  <div class="form-group">
+    <label for="ip3">result</label>
+    <input type="number" class="form-control" id="ip3" ng-model='r' disabled >
+  </div>
+    </form>
+  </body>
+
+</html>
