@@ -36,7 +36,7 @@
                 <tr ng-repeat="x in calculated">
 				
 				<td>{{ $index }}</td>
-                    <td>{{x.actual}}</td>
+                    <td><input type="text" style="width:100%; padding:4px;" placeholder="Search by Name or Office "  ng-blur="change($event)" ng-value="{{x.actual}}" /> </td>
 					<td>{{ x.ceiling }}</td>
 					<td>{{ x.dues}}</td>
 					<td>{{ x.deposited}}</td>

@@ -48,13 +48,20 @@
 					demo.progressive=$scope.calculated[i-1].progressive+=$scope.calculated[i-1].difference;
 				}
 					
-				$scope.calculated.push(demo);
+				//$scope.calculated.push(demo);
+				$scope.calculated[i]=demo;
 
 			}
-			console.log($scope.calculated);
+			//console.log($scope.calculated);
 		}
 
 		$scope.calculate_dues();
+		$scope.change = function(event){
+			actual[0]=event.target.value;
+			//console.log(event);
+			console.log(event.target.value);
+			$scope.calculate_dues();
+		}
       }]);
    
 }());
