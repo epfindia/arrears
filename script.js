@@ -43,16 +43,25 @@
 					demo.dues=Math.round(actual[i]*0.0833);
 					demo.deposited=Math.round(actual[i]*0.0833);
 				}
-				demo.difference=demo.dues-demo.deposited;
 				if(i>0) {
-					demo.progressive=$scope.calculated[i-1].progressive+=$scope.calculated[i-1].difference;
+					demo.progressive=$scope.calculated[i-1].progressive+$scope.calculated[i-1].difference;
 				}
-					
+				demo.difference=demo.dues-demo.deposited;	
 				//$scope.calculated.push(demo);
 				$scope.calculated[i]=demo;
 
 			}
+			$scope.progressive_calc();
 			//console.log($scope.calculated);
+		}
+		
+		$scope.progressive_calc=function(){
+			var arrayLength = celing.length;
+			for (var i = 0; i < 22; i++) {
+				var k = 4+12*i;
+				//$scope.calculated[k].progressive=
+				console.log(k);
+			}
 		}
 
 		$scope.calculate_dues();
