@@ -59,7 +59,16 @@
 			var arrayLength = celing.length;
 			for (var i = 0; i < 22; i++) {
 				var k = 4+12*i;
-				//$scope.calculated[k].progressive=
+				var sum=0;
+				var sum1=0;
+				if(k>5){
+				for (var j = 0; j < 12; j++){
+					sum +=$scope.calculated[k-j-1].progressive;
+					sum +=$scope.calculated[k-j-1].difference
+				}
+				$scope.calculated[k].progressive=sum;
+				$scope.calculated[k].difference=sum1;
+				}
 				console.log(k);
 			}
 		}
