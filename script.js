@@ -56,7 +56,7 @@
 		}
 		
 		$scope.progressive_calc=function(){
-			var arrayLength = celing.length;
+			/*var arrayLength = celing.length;
 			for (var i = 0; i < 22; i++) {
 				var k = 4+12*i;
 				var sum=0;
@@ -70,16 +70,18 @@
 				$scope.calculated[k].difference=sum1;
 				}
 				console.log(k);
-			}
+			}*/
 		}
 
-		$scope.calculate_dues();
+		
 		$scope.change = function(event){
 			actual[0]=event.target.value;
 			//console.log(event);
 			console.log(event.target.value);
 			$scope.calculate_dues();
 		}
+		
+		$scope.calculate_dues();
       }]);
    
 }());
